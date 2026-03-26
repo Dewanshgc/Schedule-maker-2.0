@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultimate Productivity App</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+<header>
+  <h1>⚡ Productivity OS</h1>
+  <p>Organize • Track • Dominate</p>
+</header>
+
+<section class="task-creator">
+  <input type="text" id="title" placeholder="Task title">
+  <input type="date" id="date">
+  <select id="category">
+    <option value="daily">Daily</option>
+    <option value="goal">Goal</option>
+    <option value="meeting">Meeting</option>
+  </select>
+  <button id="addBtn">Add Task</button>
+</section>
+
+<section class="board">
+  <div class="column" data-status="pending">
+    <h3>Pending</h3>
+    <div class="task-container" id="pending"></div>
+  </div>
+
+  <div class="column" data-status="completed">
+    <h3>Completed</h3>
+    <div class="task-container" id="completed"></div>
+  </div>
+</section>
+
+<section class="dashboard">
+  <div class="stat">
+    <h4>Weekly Accuracy</h4>
+    <div class="progress"><div id="weekBar"></div></div>
+    <span id="weekScore">0%</span>
+  </div>
+
+  <div class="stat">
+    <h4>Monthly Accuracy</h4>
+    <div class="progress"><div id="monthBar"></div></div>
+    <span id="monthScore">0%</span>
+  </div>
+
+  <div class="stat">
+    <h4>Yearly Accuracy</h4>
+    <div class="progress"><div id="yearBar"></div></div>
+    <span id="yearScore">0%</span>
+  </div>
+
+  <div class="charts">
+    <canvas id="lineChart"></canvas>
+    <canvas id="pieChart"></canvas>
+  </div>
+</section>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
